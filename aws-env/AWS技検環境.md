@@ -45,7 +45,7 @@ ssh -i ~/.ssh/developer.pem developer@172.17.1.231
 ### リポジトリ
 
 | リポジトリ | 用途 | URL | 
-|:-----:|:-----:|:-----:|
+|:-----|:-----|:-----|
 | webbilling | コード管理 | https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/webbilling |
 | webbilling-doc | ドキュメント管理 | https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/webbilling-doc |
 | webbilling-exeo | コード管理 | https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/webbilling-exeo |
@@ -59,3 +59,28 @@ ssh -i ~/.ssh/developer.pem developer@172.17.1.231
 git clone <上記のURL>
 ```
 プロンプトでID/PWが求められるので、`****_codecommit_credentials.csv`中の`User Name`と`Password`を入力して下さい。
+
+## Oracleへの接続
+
+### 設定情報
+
+| 項目 | 説明 | 
+|:-----|:-----|
+| エンドポイント | webbillng-db.cyqckoqjqzte.ap-northeast-1.rds.amazonaws.com |
+| ポート | 1521 |
+| SID | ORCL |
+| ユーザID | admin |
+| パスワード | webbillng-oracle |
+
+### DBへの接続
+
+```bash
+sqlplus admin@webbillng-db.cyqckoqjqzte.ap-northeast-1.rds.amazonaws.com:1521/ORCL
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu Jul 16 09:41:28 2020
+Version 19.6.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter password:
+```
