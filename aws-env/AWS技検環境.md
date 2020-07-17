@@ -76,11 +76,4 @@ git clone <上記のURL>
 
 ```bash
 sqlplus admin@webbillng-db.cyqckoqjqzte.ap-northeast-1.rds.amazonaws.com:1521/ORCL
-
-SQL*Plus: Release 19.0.0.0.0 - Production on Thu Jul 16 09:41:28 2020
-Version 19.6.0.0.0
-
-Copyright (c) 1982, 2019, Oracle.  All rights reserved.
-
-Enter password:
 ```
